@@ -1,23 +1,26 @@
+<meta charset="utf-8">
+
 <html>
     <head>
-        <title>Blog A</title>
+        <title>Django Girls blog</title>
     </head>
+	<br />
     <body>
+        <div>
+            <h1><a href="">Django Girls Blog</a></h1>
+        </div>
+
+       <br />
+	<br />
+	<br />
+	<br /><br /><br /><br /><br /><br />
+          {% for post in posts %}
 	<div>
-	<p>opublikowane: 28.08.2017</p>
-        <h1><em>Hej!</em></h1>
+    		<br/><p>published: {{ post.published_date }}</p>
+		<h1><a href="">{{ post.title }}</a></h1>
+		<p>{{ post.text|linebreaksbr }}</p>
 	</div>
-	
-	<div>
-		<br />
-		<p>opublikowane: 19.08.2017</p>
-		<h2><a href="">Działa</a></h2>
-		<a href="https://djangogirls.org">link</a>
-		<br />
-		<br />
-		<br />
-		<br />
-		<ul<li>pierwsza pozycja</li><li>druga pozycja</li></ul>
-	</div>
+{% endfor %}
+        
     </body>
 </html>
